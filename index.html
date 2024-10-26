@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthCare</title>
+    <link href="assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-primary">
+      <nav>
+        <div class="div-list">
+          <a href="#">
+            <img src="assets/images/TestLogo.svg" alt="logo" />
+          </a>
+          <ul class="body-emphasized-14pt">
+            <li>
+              <a href="#">
+                <img
+                  src="assets/images/home_FILL0_wght300_GRAD0_opsz24.png"
+                  alt="home icon"
+                />
+                Overview</a
+              >
+            </li>
+            <li class="patients-li">
+              <a href="#">
+                <img
+                  src="assets/images/group_FILL0_wght300_GRAD0_opsz24.png"
+                  alt="Patients icon"
+                />
+                Patients</a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="assets/images/calendar_today_FILL0_wght300_GRAD0_opsz24.png"
+                  alt="Schedule icon"
+                />
+                Schedule</a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="assets/images/chat_bubble_FILL0_wght300_GRAD0_opsz24.png"
+                  alt="Message icon"
+                />
+                Message</a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="assets/images/credit_card_FILL0_wght300_GRAD0_opsz24.png"
+                  alt="Transactions icon"
+                />
+                Transactions</a
+              >
+            </li>
+          </ul>
+          <div class="doctor-info">
+            <div class="image">
+              <img
+                src="assets/images/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png"
+                alt="logo"
+              />
+            </div>
+            <div class="data">
+              <p class="data-p body-emphasized-14pt">Dr. Jose Simmons</p>
+              <p class="data-p body-secondary-info-14pt">General Practtioner</p>
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <div class="options">
+              <a href="#" style="padding-right: 8px">
+                <img
+                  src="assets/images/settings_FILL0_wght300_GRAD0_opsz24.png"
+                  alt="settings"
+                />
+              </a>
+
+              <a href="#">
+                <img
+                  src="assets/images/more_vert_FILL0_wght300_GRAD0_opsz24.png"
+                  alt="more vertical"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="boxs">
+        <!-- All Patients -->
+        <div class="bg-primary list-patients">
+          <div class="search">
+            <h2>Patients</h2>
+            <a href="">
+              <img
+                src="assets/images/search_FILL0_wght300_GRAD0_opsz24.png"
+                alt="search icon"
+              />
+            </a>
+          </div>
+
+          <!-- List of Patients -->
+          <div>
+            <ul id="patient-list" class="patient-list"></ul>
+          </div>
+        </div>
+
+        <!-- Diagnosis History -->
+        <div>
+          <div class="bg-primary diagnosis">
+            <h2>Diagnosis History</h2>
+
+            <canvas id="bloodPressureChart"></canvas>
+
+            <!-- Informations  -->
+            <div class="informations">
+              <!-- Respiratory Rate -->
+              <div class="respiratory">
+                <img
+                  src="assets/images/respiratory rate.png"
+                  alt="respiratory icon"
+                />
+                <p>Respiratory Rate</p>
+                <span id="respiratory-rate" class="rates"> </span>
+                <p id="level-respiratory"></p>
+              </div>
+
+              <!-- Temperature -->
+              <div class="temperature">
+                <img
+                  src="assets/images/temperature.png"
+                  alt="temperature icon"
+                />
+                <p>Temperature</p>
+                <span id="temperature" class="rates"></span>
+                <p id="level-temperature"></p>
+              </div>
+
+              <!-- Heart Rate -->
+              <div class="heart" id="heart-rate-container">
+                <img src="assets/images/HeartBPM.png" alt="heart icon" />
+                <p>Heart Rate</p>
+                <span id="heart-rate" class="rates"> </span>
+                <span class="arrowHeart">
+                  <p>
+                    <img
+                      src="assets/images/ArrowDown.png"
+                      alt="ArrowDown icon"
+                    />
+                  </p>
+                  <p id="level-heart"></p>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diagnostic List -->
+          <div class="bg-primary diagnostic">
+            <div class="search">
+              <h2>Diagnostis List</h2>
+            </div>
+
+            <div class="diagnostic-header">
+              <div class="sizeInfo">
+                <p class="diagnostic-p">Problem/Diagnosis</p>
+              </div>
+
+              <div class="sizeDescription">
+                <p class="p-description">Description</p>
+              </div>
+
+              <div class="status">
+                <p class="p-description">Status</p>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table id="diagnosisTable">
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Information -->
+        <div>
+          <div class="bg-primary profile">
+            <div class="img-title">
+              <img id="patientProfilePicture" alt="Profile Picture" />
+              <p id="patientName" class="profile-title"></p>
+            </div>
+
+            <div class="birth">
+              <p><img src="assets/images/BirthIcon.png" alt="BirthIcon" /></p>
+              <div class="birth-info">
+                <p class="birth-title">Date Of Birth</p>
+                <p id="patientDOB" class="birth-p"></p>
+              </div>
+            </div>
+
+            <div class="birth">
+              <p><img src="assets/images/FemaleIcon.png" alt="BirthIcon" /></p>
+              <div class="birth-info">
+                <p class="birth-title">Gender</p>
+                <p id="patientGender" class="birth-p"></p>
+              </div>
+            </div>
+
+            <div class="birth">
+              <p><img src="assets/images/PhoneIcon.png" alt="BirthIcon" /></p>
+              <div class="birth-info">
+                <p class="birth-title">Contact Info</p>
+                <p id="patientPhone" class="birth-p"></p>
+              </div>
+            </div>
+
+            <div class="birth">
+              <p><img src="assets/images/PhoneIcon.png" alt="BirthIcon" /></p>
+              <div class="birth-info">
+                <p class="birth-title">Emergency Contacts</p>
+                <p id="patientEmergencyContact" class="birth-p"></p>
+              </div>
+            </div>
+
+            <div class="birth">
+              <p>
+                <img src="assets/images/InsuranceIcon.png" alt="BirthIcon" />
+              </p>
+              <div class="birth-info">
+                <p class="birth-title">Insurance Provider</p>
+                <p id="patientInsuranceType" class="birth-p"></p>
+              </div>
+            </div>
+
+            <div class="profile-botao">
+              <button class="botao-info">Show All Information</button>
+            </div>
+          </div>
+
+          <div class="bg-primary lab">
+            <div class="search">
+              <h2>Lab Results</h2>
+            </div>
+
+            <!-- Lab Results -->
+            <div>
+              <ul id="labResultsList" class="results-list ct-scans"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="src/js/data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/chart.umd.js"></script>
+    <script type="module" src="src/js/graph.js"></script>
+    <script type="module" src="src/js/informations.js"></script>
+    <script type="module" src="src/js/historic.js"></script>
+    <script type="module" src="src/js/profile.js"></script>
+    <script type="module" src="src/js/results.js"></script>
+  </body>
+</html>

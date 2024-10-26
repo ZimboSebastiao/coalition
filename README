@@ -1,0 +1,87 @@
+## Skill Test Project Documentation
+
+This project is a simple web application that uses plain HTML, CSS, and JavaScript to create a visual and interactive interface. The project is correctly rendered with the Live Server extension in Visual Studio Code and uses the ChartJs library for creating dynamic charts based on data received from an external API.
+
+### Project Structure
+
+```plaintext
+
+assets/
+  ├── css/
+  │   └── styles.css
+  ├── images/
+  ├── screenshot/
+  │   ├── screen1.png
+  │   └── screen2.png
+  └── video/
+      └── HealthCare.mp4
+src/
+  ├── api/
+  │   ├── api.js
+  │   ├── auth.js
+  │   └── fetch.js
+  ├── js/
+  │   ├── data.js
+  │   ├── graph.js
+  │   ├── historic.js
+  │   ├── informations.js
+  │   ├── profile.js
+  │   └── results.js
+index.html
+README.md
+
+```
+
+### Steps to Run the Project
+
+#### Prerequisites
+
+1. Visual Studio Code: Ensure Visual Studio Code is installed on your computer.
+
+2. Live Server Extension: Install the Live Server extension in Visual Studio Code to properly load the site.
+
+#### Instructions
+
+1. Open the Project in Visual Studio Code: Navigate to the project folder and open it in Visual Studio Code.
+
+2. Start Live Server:
+   - Right-click on the index.html file.
+   - Select "Open with Live Server".
+3. View the Site: The site will automatically load in your default browser.
+
+### Demonstrative Video
+
+<video width="640" height="260" autoplay controls>
+  <source src="assets/video/HealthCare.mp4" type="video/mp4">
+ Your browser does not support the video element.
+</video>
+
+### Technologies Used
+
+- HTML5: For page structure.
+- Pure CSS: For styling and responsive layout.
+- JavaScript: For client-side logic and data manipulation.
+- ChartJs: To create interactive charts displaying dynamic data.
+
+### Features
+
+- Dynamic Chart: Using Chart.js, the project displays a chart representing data received from an API.
+- Patient List: Displays a list of patients fetched via API requests.
+- Profile Information: Shows detailed information about each patient, including contact data and medical history.
+
+### Project Images
+
+![Screen](assets/screenshot/screen1.png)
+![Screen](assets/screenshot/screen2.png)
+
+### API and Integration
+
+The application uses data from an external API. Scripts in the src/api directory are responsible for:
+
+- api.js: Basic API configuration.
+- auth.js: Functions related to authentication and access control.
+- fetch.js: Data requests to the API.
+
+### Style and Design
+
+The site’s style is managed by the styles.css file located in assets/css. A combination of CSS variables for colors, font sizes, and spacing is used to provide a modern and clean layout.
